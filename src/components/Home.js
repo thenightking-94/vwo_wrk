@@ -63,7 +63,13 @@ class Home extends Component {
         //cookie creation on form close
         var today = new Date();
         document.cookie = "username =" + "user_who_closed_popup" + ";expires=" + (new Date(today.getTime() + 1 * 24 * 3600 * 1000)).toDateString() + ";path=/";
-    }
+		$(document).ready(() => {
+                    $('.assumed_viewport').on('mouseleave', () => {
+                        $('.pop_up').hide();
+                    })
+
+                })
+	}
 
 
     //mobile dislay form
@@ -82,17 +88,23 @@ class Home extends Component {
             window.alert('please enter your email address / check newsletter box');
         }
 
-        if (this.yn.value != '' && this.em.value != '') {
+        if (name != '' && email != '') {
             localStorage.setItem('name1', this.yn.value);
             localStorage.setItem('email1', this.em.value);
         }
 
-        if (localStorage.getItem('name1') != '' && localStorage.getItem('email1') != '' && this.ch.checked) {
+        if (name != '' && email != '' && this.ch.checked) {
             //cookie creation on form submit
             var today = new Date();
             document.cookie = "username =" + this.yn.value + ";expires=" + (new Date(today.getTime() + 1 * 24 * 3600 * 1000)).toDateString() + ";path=/";
             window.alert('Your response has been submitted & cookies created');
             document.getElementById('btn_form_close').style.display = 'none';
+			$(document).ready(() => {
+                    $('.assumed_viewport').on('mouseleave', () => {
+                        $('.pop_up').hide();
+                    })
+
+                })
         }
 
 
