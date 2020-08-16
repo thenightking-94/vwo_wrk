@@ -1,0 +1,82 @@
+#basic_screen {
+  height: 560px;
+  background: #2f2f2f;
+  width: 99%;
+  padding-top: 200px;
+  margin-top: 0.5%;
+  margin-bottom: 2%;
+  margin-left: 0.5%;
+  margin-right: 0.5%;
+  text-align: center;
+}
+
+#basic_screen > p {
+  font-size: 30px;
+  font-weight: 400;
+  color: white;
+}
+
+.pop_up {
+  display: none;
+  position: fixed;
+  top: 25%;
+  background: #fdcc0c;
+  left: 30%;
+  width: 710px;
+  height: 370px;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+@media (max-width: 760px) {
+  .pop_up {
+    width: 342px !important;
+    left: 3%;
+  }
+}
+
+.btn_close {
+  text-transform: capitalize;
+  background-color: transparent;
+  font-size: 30px;
+}
+
+.MuiButton-label-99 {
+  justify-content: flex-end !important;
+}
+
+#image_banner {
+  height: 280px;
+  width: 290px;
+}
+.input_bx {
+  outline: none;
+  border: none;
+  width: 295px;
+  height: 45px;
+  border-radius: 2px;
+}
+
+.label_ck {
+  font-size: medium;
+  font: status-bar;
+  color: #2f2f2f;
+}
+.input_sub {
+  height: 50px;
+  border: none;
+  width: 300px;
+}
+#privacy_link {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  font: status-bar;
+  color: black;
+  cursor: pointer;
+}
+
+@media (max-width: 760px) {
+  .mobile_version_check {
+    display: none;
+  }
+}
